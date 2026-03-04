@@ -155,7 +155,7 @@ class _CardsScreenState extends State<CardsScreen> {
           ),
         ],
       ),
-      // ── FAB opens AddEditCardScreen for a new card ─────────────────────
+      // Opens AddEditCardScreen for a new card
       floatingActionButton: FloatingActionButton(
         onPressed: _addCard,
         tooltip: 'Add card',
@@ -183,7 +183,7 @@ class _CardsScreenState extends State<CardsScreen> {
                   elevation: 3,
                   clipBehavior: Clip.antiAlias,
                   child: InkWell(
-                    // ── Tap anywhere on the card to edit it ───────────────
+                    // Tap anywhere on the card to edit it
                     onTap: () => _editCard(card),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -220,7 +220,6 @@ class _CardsScreenState extends State<CardsScreen> {
                                   iconSize: 18,
                                   icon: const Icon(Icons.delete,
                                       color: Colors.red),
-                                  // stopPropagation: delete tap doesn't trigger onTap
                                   onPressed: () => _deleteCard(card),
                                 ),
                               ),
